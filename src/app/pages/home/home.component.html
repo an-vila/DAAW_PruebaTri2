@@ -1,0 +1,9 @@
+<div>
+    @for (serie of series$ | async; track serie.title) {
+      <div class="serie">
+        <h3>{{ serie.title }}</h3>
+        <p>Canal: {{ serie.channel }}</p>
+        <p>Valoración: {{ serie.rating }}</p>
+      </div>
+    }
+</div>

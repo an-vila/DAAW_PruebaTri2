@@ -1,0 +1,18 @@
+<h2>Añadir serie</h2>
+
+@if (idNuevo) {
+    <p>Serie con el ID: {{ idNuevo }} añadida.</p>
+} @else {
+    <form [formGroup]="form" (ngSubmit)="save()">
+      <label>Titulo</label>
+      <input type="text" formControlName="title" />
+    
+      <label>Canal</label>
+      <input type="text" formControlName="channel" />
+    
+      <label>Rating</label>
+      <input type="numer" formControlName="channel" />
+    
+      <button type="submit" [disabled]="form.invalid">Añadir</button>
+    </form>
+}
